@@ -1,54 +1,72 @@
 #include<cstdio>
 using namespace std;
-//输出梯形 
+//寻找X 
 int main(){
-	int h;
-	while(scanf("%d",&h)!=EOF){
-		int maxLine=h+(h-1)*2;
-		for(int i=1;i<=h;i++){
-			for(int j=1;j<=maxLine;j++){
-				if(j<maxLine-h--(i-1)*2+1)
-					printf(" ");
-				else printf("*"); 
-			}
-			printf("\n");
-		}
-	} 
-	return 0;
-} 
-//叠箩筐
-int main(){
-	int outPutBuf[82][82];
-	char a,b;
+	int buf[200];
 	int n;
-	bool firstCase = true;
-	while(scanf("%d%c%c",&n,&a,&b)==3){
-		if(firstCase==true)
-			firstCase=false;
-		else printf("\n");
-		for(int i=1,j=1;i<=n;i+=2,j++){
-			int x=n/2+1,y=x;
-			x-=j-1;y-=j-1;
-			char c=j%2==1?a:b;
-			for(int k=1;k<=i;k++){
-				outPutBuf[x+k-1][y]=c;
-				outPutBuf[x][y+k-1]=c;
-				outPutBuf[x+i-1][y+k-1]=c;
-				outPutBuf[x+k-1][y+i-1]=c;
-			} 
+	while(scanf("%d",&n)!=EOF){
+		for(int i=0;i<n;i++){
+			scanf("%d",&buf[i]);
 		}
-		if(n!=1){
-			outPutBuf[1][1]=" ";
-			outPutBuf[n][1]=" ";
-			outPutBuf[1][n]=" ";
-			outPutBuf[n][n]=" ";
-		} 
-		for(int i=1;i<=n;i++){
-			for(int j=1;j<=n;j++){
-				printf("%c",outPutBuf[i][j]);
+		int x,ans=-1;
+		scanf("%d",&x);
+		for(int i=0;i<n;i++){
+			if(x==buf[i]){
+				ans=i;
+				break;
 			}
-			printf("\n");
 		}
+		printf("%d\n",ans);
 	}
 	return 0;
-} 
+}
+// 查找学生信息 二分查找
+#include<algorithm>
+#include<cstring>
+using namespace std;
+struct Student{
+	char no[100];
+	char name[100];
+	int age;
+	char sex[5];
+	bool operator < (const Student & A) const{
+		return strcmp(no,A.no)<0;
+	} 
+}buf[1000];
+
+int main(){
+	int n;
+	while(scanf("%d",&n)!=EOF){
+		for(int i=0;i<n;i++){
+			scanf("%s%s%s%d",buf[i].no,buf[i].name,buf[i].sex,&buf[i].age);
+		}
+		sort(buf,buf+n);
+		int t;
+		scanf("%d",&t);
+		while(t--!=0){
+			int ans=-1;
+			char x[30];
+			scanf("%s",x);
+			int top=n-1,base=0;
+			while(top>=base){
+				int mid=(top+base)/2;
+				int tmp=strcmp(buf[mid].no,x);
+				if(tmp==0){
+					ans=mid;
+					break;
+				}
+				else if(tmp>0)top=mid-1;
+				else base=mid+1;
+			}
+			if(ans==-1){
+				printf("No Answer\n");
+			}
+			else
+			{
+				printf("%s%s%s%d",buf[i].no,buf[i].name,buf[i].sex,buf[i].age);
+			}
+		}
+		
+	}
+	return 0;
+}
