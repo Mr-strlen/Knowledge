@@ -70,3 +70,14 @@ int main(){
 	}
 	return 0;
 }
+//二分查找伪代码
+//存在一个升序有序的数组buf，其大小为size，目标数字为target
+/*
+int base=0,top=size;
+while(base<=top){
+	int mid=(base+top)/2;
+	if(buf(mid)<=target) base=mid+1;
+	else top=mid-1;
+}
+int ans = top;
+*/ 
