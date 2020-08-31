@@ -52,6 +52,7 @@
 然后我就拿了64/120,8/10,12/16,2/4，合计86分，TMD是有多菜啊  
 算成100分的话，md就拿了61分，刚过及格线啊，哥哥  
 不太行，头疼，真来玩硬知识还真的不太行  
+![image](https://github.com/Mr-strlen/Knowledge/blob/master/Image/%E5%93%88%E5%B7%A5%E6%B7%B1%E6%88%90%E7%BB%A9%E5%8D%95.PNG)
 
 ## 校招/社招 记录
 ### 网易
