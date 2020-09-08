@@ -269,3 +269,137 @@ int main(){
 	return 0;
 }
 //二分求幂 
+#include<cstdio>
+using namespace std;
+int main(){
+	int a,b;
+	while(scanf("%d%d",&a,&b)!=EOF) {
+		if(a==0 && b==0) break;
+		int ans=1;
+		while(b!=0){
+			if(b%2==1){
+				ans*=a;
+				ans%=1000;
+			}
+			b/=2;
+			a*=a;
+			a%=1000;
+		}
+		printf("%d\n",ans);
+	}
+	return 0; 
+} 
+//高精度整数
+#include<cstdio>
+#include<cstring>
+using namespace std;
+strcut biginteger{
+	int digit[1000];
+	int size;
+	void init(){
+		for(int i=0;i<1000;i++) digit[i]=0;
+		size=0;
+	}
+	void set(char str[]){
+		init();
+		int L=strlen(str);
+		for(int i=L-1,j=0,t=0,c=1;i>=0;i--){
+			t+(str[i]-'0')*c;
+			j++;
+			c*=10;
+			if(j==4 || i==0){
+				digit[size++]=t;
+				j=0;
+				t=0;
+				c=1;
+			}
+		}
+	}
+	void output(){
+		for(int i=size-1;i>=0;i--){
+			if(i!=size-1) printf("%04d",digit[i]);
+			else printf("%d",digit[i]);
+		}
+		printf("\n");
+	}
+	biginterger operator + (const biginterger &A) const{
+		biginterger ret;
+		ret.init();
+		int carry=0;
+		for(int i=0;i<A.size || i<size;i++){ 
+			int tmp=A.digit[i]+digit[i]+carry;
+			carry=tmp/10000;
+			tmp%=10000;
+			ret.digit[ret.size++]=tmp; 
+		}
+		if(carry!=0){
+			ret.digit[ret.size++]=carry;
+		}
+		return ret;
+	}
+} a,b,c;
+char str1[1002],str2[1002];
+int main(){
+	while(scanf("%s%s",str1,str2)!=EOF){
+		a.set(str1);b.set(str2);
+		c=a+b;
+		c.output();
+	}
+	return 0;
+}
+//N的阶乘
+#include<cstdio>
+#include<cstring>
+using namespace std;
+struct biginterger{
+	int digit[1000];
+	int size;
+	void init(){
+		for(int i=0;i<1000;i++) digit[i]=0;
+		size=0;
+	}
+	void set(int x){
+		init();
+		int L=strlen(str);
+		do{
+			digit[size++]=x%10000;
+			x/=10000;
+		}while(x!=0);
+	}
+	void output(){
+		for(int i=size-1;i>=0;i--){
+			if(i!=size-1) printf("%04d",digit[i]);
+			else printf("%d",digit[i]);
+		}
+		printf("\n");
+	}
+	biginterger operator *(int x) const{
+		biginterger ret;
+		ret.init()；
+		int carry=0;
+		for(int i=0;i<size;i++){
+			int tmp=x*digit[i]+carry;
+			carry=tmp/10000;
+			tmp%=10000;
+			ret.digit[ret.size++]=tmp;
+		} 
+		if(carry!=0)
+		ret.digit[ret.size++]=tmp;
+	}
+	if(carry!=0)
+		ret.digit[ret.size++]=carry;
+	return ret;
+}a;
+int main(){
+	int n;
+	while(scanf("%d",&n)!=EOF){
+		a.init();
+		a.set(1);
+		for(int i=1;i<=n;i++){
+			a=a*i;
+		} 
+		a.output();
+	}
+	return 0;
+}
+//大数字的进制转换	
