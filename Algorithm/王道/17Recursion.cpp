@@ -62,7 +62,7 @@ int main(){
 	}
 	return 0;
 }
-//图的遍历
+//图的遍历 Flood Fill洪泛 
 #include<stdio.h>
 char maze[101][101];
 bool mark[101][101];
