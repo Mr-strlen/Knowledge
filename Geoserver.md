@@ -142,3 +142,17 @@ GeoServer 支持发布多种数据格式，常见的格式有GeoTIFF、Shapfile�
 开源数据一般使用Landsat数据集  
 一般从earth explorer或者地理空间云平台下载  
 [在地理空间云平台下载数据教程](https://www.cnblogs.com/xingyi-qjl/p/9255961.html)  
+发布之后在java中调用api可视  
+##### OpenStreetMap数据源
+参考教程   
+* https://blog.csdn.net/junlong750/article/details/104183750
+* https://www.cnblogs.com/think8848/p/6013939.html
+
+出现的error记录：
+1. Postgres 安装语句  
+yum install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+
+2. yum install postgis24_10 postgis24_10-client -y 出现error显示缺少依赖  
+https://my.oschina.net/shuizeiguohe/blog/365293  
+目标包地址：https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/  
+出现 conflicts：https://blog.csdn.net/u014221090/article/details/87168144  
