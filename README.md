@@ -7,7 +7,13 @@
 * C++小玩意（C++ Training Program）    
 主要是实验室开发和之后的开发基本都会用到C和C++，然后自己那个糟糕的项目开发经验就不说了。所以找了点小玩意，用来练练手，以及打发时间。  
 具体项目参考来源 [有哪些适合新手练手的C/C++项目？](https://zhuanlan.zhihu.com/p/23047091?utm_source=wechat_session&utm_medium=social&utm_oi=763170544924246016&utm_campaign=shareopn "悬停显示")
-  
+
+## 数学课笔记
+讲真，自己忘的都差不多了，很郁闷  
+* [概率论](Computer/机器学习/《概率论》.pdf)
+* [数理统计](Computer/机器学习/《数理统计》.pdf)
+* [高等数学](Computer/高等数学.pdf)，参考 https://www.cnblogs.com/ixtwuko/p/advanced-mathematics.html
+
 ## 计算机专业课笔记
 * [数据库原理](Computer/数据库原理（基本概念+缺面试）.pdf)  
 * [计算机网络](Computer/计算机网络（基本概念+缺面试）.pdf)  
@@ -22,8 +28,6 @@
 * [面经总结-数据分析](Computer/机器学习/《面经总结》数据分析_undone.pdf)
 
 ### 机器学习部分：
-* [概率论](Computer/机器学习/《概率论》.pdf)
-* [数理统计](Computer/机器学习/《数理统计》.pdf)
 * [分类](Computer/机器学习/机器学习-分类算法.pdf)
 * [回归](Computer/机器学习/机器学习-回归算法.pdf)
 * [聚类](Computer/机器学习/机器学习-聚类算法.pdf)
