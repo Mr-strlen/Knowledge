@@ -8,7 +8,10 @@
 主要是实验室开发和之后的开发基本都会用到C和C++，然后自己那个糟糕的项目开发经验就不说了。所以找了点小玩意，用来练练手，以及打发时间。  
 具体项目参考来源 [有哪些适合新手练手的C/C++项目？](https://zhuanlan.zhihu.com/p/23047091?utm_source=wechat_session&utm_medium=social&utm_oi=763170544924246016&utm_campaign=shareopn "悬停显示")
 * 数字图像处理  
-是研究生的课程，最后做了一个大作业，用tkinter写了一个可视化的软件，并且增加了一些基础的数字图像处理方式
+是研究生的课程，最后做了一个大作业，用tkinter写了一个可视化的软件，并且增加了一些基础的数字图像处理方式  
+非常好的参考：  
+  - 《数字图像处理的python实践》 https://blog.csdn.net/baidu_41902768/category_9291515.html
+  - 《数字图像处理学习笔记》 https://blog.csdn.net/it_charge/category_9899861.html
 
 ## 数学课笔记
 讲真，自己忘的都差不多了，很郁闷  
