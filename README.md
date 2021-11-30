@@ -63,9 +63,8 @@
 
 ## 其他计划
 ### github 个人静态网页设计
-https://github.com/qianjiahao/HowToDeployHTML  
-https://www.jianshu.com/p/9f71e260925d  
-https://github.com/Granvallen/granvallen.github.io  
+#### 学术模板参考
+王云鹤老师的主页 https://github.com/YunheWang/HomePage
 
 ### Typora 教程
 https://sspai.com/post/54912  
